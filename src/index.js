@@ -1,16 +1,38 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+
+// third-party
+import { Provider as ReduxProvider } from "react-redux";
+
+// scroll bar
+// import "./simplebar/dist/simplebar.css";
+
+// apex-chart
+import "./assets/third-party/apex-chart.css";
+import "./assets/third-party/react-table.css";
+
+// project import
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
+import { store } from './store';
 
-import { store } from 'store';
+// import { configProvider } from 'contexts/ConfigContext';
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const container = document.getElementById("root");
+const root = createRoot(container);
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// ==============================|| MAIN - REACT DOM RENDER  ||============================== //
+
 root.render(
-  <Provider store={store}>
-    <App />
-  </Provider>
+  <ReduxProvider store={store}>
+    {/* <ConfigProvider> */}
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+    {/* </ConfigProvider> */}
+  </ReduxProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
