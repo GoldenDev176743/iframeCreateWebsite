@@ -1,12 +1,15 @@
 import { Box } from "@mui/material";
 import Logo from "./Logo";
+import Menu from "./menu-item";
+
 const Sidebar = () => {
-  return(
-    <Box sx={{ width: '100%' }}>
+  return (
+    <Box sx={{ width: "100%" }}>
       <Logo />
-      <Box></Box>
+      <hr color="#F4F7FE"/>
+      <Menu />
     </Box>
-  )
-}
+  );
+};
 
 export default Sidebar;

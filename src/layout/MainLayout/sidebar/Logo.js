@@ -4,8 +4,8 @@ const Logo = () => {
   return (
     <Box
       sx={{
-        width: '70%',
-        margin: '20px auto'
+        width: "70%",
+        margin: "20px auto",
       }}
     >
       <Box

@@ -7,6 +7,7 @@ import Flows from "../pages/Flows";
 import Analytics from "../pages/Analytics";
 import Support from "../pages/Support";
 import Account from "../pages/Account";
+import Logout from "../pages/Logout";
 
 
 // ==============================|| MAIN ROUTING ||============================== //
@@ -34,6 +35,10 @@ const MainRoutes = {
     {
       path: "/account",
       element: <Account />
+    },
+    {
+      path: "/logout",
+      element: <Logout />
     },
   ],
 };
