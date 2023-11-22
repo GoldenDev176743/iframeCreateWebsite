@@ -1,5 +1,6 @@
 // project import
 import MainLayout from "../layout/MainLayout";
+import { Navigate } from "react-router-dom";
 
 // pages routing
 import Dashboard from "../pages/Dashboard";
@@ -18,6 +19,10 @@ const MainRoutes = {
   children: [
     {
       path: "/",
+      element: <Navigate to="/dashboard" />
+    },
+    {
+      path: "/dashboard",
       element: <Dashboard />
     },
     {

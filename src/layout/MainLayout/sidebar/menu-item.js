@@ -9,12 +9,12 @@ import LockIcon from "@mui/icons-material/Lock";
 
 // constant
 const menuItem = [
-  { title: "Dashboard", path: "/", icon: "HomeIcon" },
-  { title: "Flows", path: "/flows", icon: "ShoppingCartOutlinedIcon" },
-  { title: "Analytics", path: "/analytics", icon: "BarChartOutlinedIcon" },
-  { title: "Suporte", path: "/support", icon: "DashboardIcon" },
-  { title: "Conta", path: "/account", icon: "PersonIcon" },
-  { title: "Log out", path: "/logout", icon: "LockIcon" },
+  { title: "Dashboard", path: "/" },
+  { title: "Flows", path: "/flows" },
+  { title: "Analytics", path: "/analytics" },
+  { title: "Suporte", path: "/support" },
+  { title: "Conta", path: "/account" },
+  { title: "Log out", path: "/logout" },
 ];
 
 const CommonStyle =
@@ -24,7 +24,7 @@ const ItemNormalStyle1 = "flex items-center py-2";
 const ItemSelectStyle2 = "ml-3 text-[#2B3674]";
 const ItemNormalStyle2 = "ml-3";
 const ItemSelectStyle3 = "w-1 h-9 bg-[#4318FF] rounded-[25px] block";
-const ItemNormalStyle3 = "w-1 h-9 bg-[#4318FF] rounded-[25px] hidden";
+const ItemNormalStyle3 = "";
 
 const Menu = () => {
   const [state, setState] = useState("Dashboard");
