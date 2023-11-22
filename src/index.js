@@ -2,7 +2,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
 // third-party
-import { Provider as ReduxProvider } from "react-redux";
+import { Provider } from "react-redux";
 
 // scroll bar
 // import "./simplebar/dist/simplebar.css";
@@ -26,13 +26,11 @@ const root = createRoot(container);
 // ==============================|| MAIN - REACT DOM RENDER  ||============================== //
 
 root.render(
-  <ReduxProvider store={store}>
-    {/* <ConfigProvider> */}
+  <Provider store={store}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-    {/* </ConfigProvider> */}
-  </ReduxProvider>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
