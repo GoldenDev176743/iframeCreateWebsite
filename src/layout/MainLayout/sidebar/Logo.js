@@ -1,28 +1,10 @@
-import { Box } from "@mui/material";
-
 const Logo = () => {
   return (
-    <Box
-      sx={{
-        width: "70%",
-        margin: "10px auto",
-      }}
-    >
-      <Box
-        sx={{
-          padding: "20px 40px",
-          fontSize: "40px",
-          fontWeight: "900",
-          color: "green",
-          textAlign: "center",
-          backgroundColor: "lightyellow",
-          border: "1px solid gray",
-          borderRadius: "10px",
-        }}
-      >
+    <div className="w-[70%] my-2.5 mx-auto">
+      <div className="text-green-700 text-center text-[40px] font-black bg-[lightyellow] border-solid border-[1px] border-[gray] rounded-[10px] py-4">
         LOGO
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 };
 

@@ -22,7 +22,7 @@ const HeaderRightBar = (props) => {
       <IconButton>
         <InfoOutlinedIcon />
       </IconButton>
-      <div className="w-[41px] ml-4">
+      <div className="w-[41px] ml-4 cursor-pointer">
         <img src="./avatar.jpg" alt="avatar" className="rounded-full" />
       </div>
     </div>

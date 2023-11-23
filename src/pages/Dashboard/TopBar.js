@@ -3,7 +3,7 @@ import SearchBar from "../../components/SearchBar";
 
 const TopBar = () => {
   return (
-    <div className="flex justify-between mt-10 px-12">
+    <div className="flex h-[40px] justify-between mt-6 px-12">
       <div>
         <Button btnName="+ Create Flow" />
       </div>
