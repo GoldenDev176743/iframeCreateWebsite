@@ -13,7 +13,7 @@ const DefaultButton = (props) => {
   return(
     <ThemeProvider theme={theme}>
       <Button
-        className="!min-w-[100px] !rounded-full !normal-case"
+        className="!min-w-[100px] !h-[36px] !rounded-full !normal-case"
         variant="contained"
         color="primary"
       >

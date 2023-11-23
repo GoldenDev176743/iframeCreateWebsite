@@ -1,8 +1,18 @@
 import Button from "../../components/DefaultButton";
+import SearchBar from "../../components/SearchBar";
 
 const TopBar = () => {
   return (
-    <Button btnName="+ Create Flow" />
+    <div className="flex justify-between mt-10 px-12">
+      <div>
+        <Button btnName="+ Create Flow" />
+      </div>
+      <div className="flex gap-6 items-center">
+        <Button btnName="Filter by" />
+        <Button btnName="Order by" />
+        <SearchBar bg="bg-white" />
+      </div>
+    </div>
   );
 };
 
