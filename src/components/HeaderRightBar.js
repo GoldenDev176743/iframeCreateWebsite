@@ -10,7 +10,7 @@ const HeaderRightBar = (props) => {
       <div className="text-black text-sm font-normal font-['DM Sans'] leading-tight">
         Welcome Marcelo!
       </div>
-      <div className={ props.search === "hidden" ? "hidden" : "block" }>
+      <div className={props.search}>
         <SearchBar />
       </div>
       <IconButton>

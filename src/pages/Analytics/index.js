@@ -1,6 +1,13 @@
+// import components
+import Header from "../../components/Header";
+import Content from "./Content";
+
 const Analytics = () => {
   return(
-    <div>Hello Analytics</div>
+    <div>
+      <Header name="Analytics" search="block" />
+      <Content />
+    </div>
   )
 }
 

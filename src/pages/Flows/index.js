@@ -1,6 +1,13 @@
+// import components
+import Header from "../../components/Header";
+import Content from "./Content";
+
 const Flows = () => {
   return(
-    <div>Hello Flows</div>
+    <div>
+      <Header name="Flows" search="block" />
+      <Content />
+    </div>
   )
 }
 
