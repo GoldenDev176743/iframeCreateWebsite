@@ -22,11 +22,13 @@ const CreateVideoCards = () => {
   return (
     <div className="flex gap-8">
       {CardList.map((item) => (
-        <CreateVideoCard
-          iconName={item.iconName}
-          btnName={item.btnName}
-          description={item.description}
-        />
+        <div className="hover:animate-[scale_0.2s_linear] hover:scale-105 cursor-pointer">
+          <CreateVideoCard
+            iconName={item.iconName}
+            btnName={item.btnName}
+            description={item.description}
+          />
+        </div>
       ))}
     </div>
   );
