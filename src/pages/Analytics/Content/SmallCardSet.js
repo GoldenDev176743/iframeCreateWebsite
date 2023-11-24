@@ -1,4 +1,4 @@
-import SmallSingleCard from "./SmallSingleCard";
+import SmallSingleCard from "../../../components/SmallSingleCard";
 
 const SmallCardList = [
   { title: "Total Views", value: "5.000" },
