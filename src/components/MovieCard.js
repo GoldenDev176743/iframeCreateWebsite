@@ -3,9 +3,9 @@ import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 
 const MovieCard = () => {
   return (
-    <div className="h-[33.33%] rounded-[20px] cursor-pointer hover:bg-[#2B3674] text-indigo-900 hover:text-[#eee] p-[5%] relative">
+    <div className="w-[calc(85vw-96px)*0.24] h-[calc(100vh-184px)*0.3333] rounded-[20px] cursor-pointer bg-white hover:bg-[#2B3674] text-indigo-900 hover:text-[#eee] p-[18.432px] relative">
       <div className="gradient-overlay rounded-[20px]">
-        <img src="./card.png" alt="card.png" className="h-[160px] w-[100%]" />
+        <img src="./card.png" alt="card.png" className="h-[160px] w-full" />
       </div>
       <div className="text-2xl font-bold ml-2">Starbucks</div>
       <div className="flex align-center text-slate-400 ml-2">
