@@ -14,7 +14,7 @@ const menuItem = [
   { title: "Analytics", path: "/analytics" },
   { title: "Suporte", path: "/support" },
   { title: "Conta", path: "/account" },
-  { title: "Log out", path: "/logout" },
+  { title: "Log out", path: "/" },
 ];
 
 const CommonStyle =
