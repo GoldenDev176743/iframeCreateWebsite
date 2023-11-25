@@ -9,12 +9,11 @@ import LockIcon from "@mui/icons-material/Lock";
 
 // constant
 const menuItem = [
-  { title: "Dashboard", path: "/" },
+  { title: "Dashboard", path: "/dashboard" },
   { title: "Flows", path: "/flows" },
   { title: "Analytics", path: "/analytics" },
   { title: "Suporte", path: "/support" },
   { title: "Conta", path: "/account" },
-  { title: "Log out", path: "/" },
 ];
 
 const CommonStyle =
@@ -53,10 +52,8 @@ const Menu = () => {
               <BarChartOutlinedIcon />
             ) : item.title === "Suporte" ? (
               <DashboardIcon />
-            ) : item.title === "Conta" ? (
-              <PersonIcon />
             ) : (
-              <LockIcon />
+              <PersonIcon />
             )}
             <div
               className={
@@ -73,6 +70,18 @@ const Menu = () => {
           />
         </div>
       ))}
+      <div
+        className={CommonStyle}
+        onClick={() => {
+          navigate("/dashboard");
+          setState("Dashboard");
+        }}
+      >
+        <div className={ItemNormalStyle1}>
+          <LockIcon />
+          <div className={ItemNormalStyle2}>Log out</div>
+        </div>
+      </div>
     </div>
   );
 };

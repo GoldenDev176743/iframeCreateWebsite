@@ -1,13 +1,6 @@
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material";
 import Button from "@mui/material/Button";
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#11047A",
-    },
-  },
-});
+import theme from "../theme";
 
 const DefaultButton = (props) => {
   return(
