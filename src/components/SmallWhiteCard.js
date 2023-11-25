@@ -1,4 +1,4 @@
-const SmallSingleCard = (props) => {
+const SmallWhiteCard = (props) => {
   return (
     <div className="w-[48%] h-[100%] bg-white rounded-[20px] relative">
       <div className="absolute left-[6%] top-[6%] text-indigo-900 text-[22px] font-bold">
@@ -11,4 +11,4 @@ const SmallSingleCard = (props) => {
   );
 };
 
-export default SmallSingleCard;
+export default SmallWhiteCard;

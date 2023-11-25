@@ -7,9 +7,9 @@ const RecentlyAdded = () => {
         Recentemente adicionados
       </div>
       <div className="flex gap-10 mt-8">
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
+        <MovieCard name="#Flow1" />
+        <MovieCard name="#Flow2" />
+        <MovieCard name="#Flow3" />
       </div>
     </div>
   );
