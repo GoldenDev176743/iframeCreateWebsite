@@ -8,7 +8,7 @@ const DefaultButton = (props) => {
       <Button
         className="!min-w-[100px] !h-[36px] !rounded-full !normal-case"
         variant="contained"
-        color="primary"
+        color={props.color}
       >
         {props.btnName}
       </Button>
