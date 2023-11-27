@@ -1,6 +1,7 @@
 // import pages
 import { Outlet } from "react-router-dom";
 import Sidebar from "./sidebar";
+import Footer from "./Footer";
 
 // ==============================|| MAIN LAYOUT ||============================== //
 
@@ -10,8 +11,9 @@ const MainLayout = () => {
       <div className="w-[15%] min-w-[200px]">
         <Sidebar />
       </div>
-      <div className="w-[85%] h-screen bg-[#F4F7FE]">
+      <div className="w-[85%] h-screen bg-[#F4F7FE] relative">
         <Outlet />
+        <Footer />
       </div>
     </div>
   );

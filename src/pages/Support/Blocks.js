@@ -10,15 +10,15 @@ const BlockList = [
 
 const Blocks = () => {
   return (
-    <div>
+    <div className="w-full">
       <div className="text-indigo-900 text-2xl font-bold">Blocks</div>
-      <div className="flex mt-1 gap-8">
+      <div className="flex flex-row mt-1 gap-8 flex-wrap">
         {
           BlockList.map((item) => (
             <SmallMovieCard name={item.name} />
           ))
         }
-        <div className="w-[244px] h-[180px] bg-[#11047A] rounded-[20px] flex flex-col justify-end items-center text-white text-2xl cursor-pointer hover:opacity-[0.9] hover:animate-[scale_0.2s_linear] hover:scale-105 z-10">
+        <div className="w-[244px] h-[180px] bg-[#11047A] rounded-2xl flex flex-col justify-end items-center text-white text-2xl cursor-pointer hover:opacity-[0.9] hover:animate-[scale_0.2s_linear] hover:scale-105 z-10">
           <AddCircleOutlineIcon
             sx={{ transform: "scale(3)" }}
           />

@@ -3,7 +3,7 @@ import ProgressBar from "../../components/ProgressBar";
 const Progress = (props) => {
   return (
     <>
-      <div className="flex justify-between">
+      <div className="flex justify-between text-slate-400">
         <div>{props.name}</div>
         <div>{props.value}</div>
       </div>

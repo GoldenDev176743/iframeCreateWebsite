@@ -2,12 +2,13 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import DropButton from "./Button/DropButton";
 import InputArea from "./Button/InputArea";
 import DefaultButton from "../../components/DefaultButton";
+import BoxText from "../../components/BoxText";
 
 const BlockDetail = () => {
   return (
-    <div className="w-[100%] h-auto mt-4 flex justify-between">
+    <div className="w-full mt-4 flex justify-between">
       <div>
-        <div className="w-[42vw] bg-white rounded-[20px] px-8 py-4">
+        <div className="w-[42vw] bg-white rounded-2xl px-8 py-4">
           <div className="text-blue-950 text-lg font-bold">Block 1</div>
           <div className="text-slate-400 text-sm font-normal">
             Adicione interatividade ao seu path
@@ -19,44 +20,26 @@ const BlockDetail = () => {
             <div className="text-black text-sm font-bold ml-3">Add video</div>
           </div>
           <div className="mt-2 flex justify-between">
-            <div className="flex">
-              <div className="w-9 h-[35px] bg-indigo-900 rounded-md text-white flex justify-center items-center">
-                A
-              </div>
-              <div className="ml-1">
-                <DropButton width="110px" title="BLOCK" />
-              </div>
-              <div className="ml-1">
-                <DropButton width="220px" title="Block #2" />
-              </div>
+            <div className="flex gap-1">
+              <BoxText label="A" />
+              <DropButton width="small" title="BLOCK" />
+              <DropButton title="Block #2" />
             </div>
             <div className="w-9 h-[35px] bg-[#4318FF] rounded-md text-white flex justify-center items-center" />
           </div>
           <div className="mt-1 flex justify-between">
-            <div className="flex">
-              <div className="w-9 h-[35px] bg-indigo-900 rounded-md text-white flex justify-center items-center">
-                B
-              </div>
-              <div className="ml-1">
-                <DropButton width="110px" title="TEXTO" />
-              </div>
-              <div className="ml-1">
-                <InputArea width="220px" value="Lorem Ipsum" />
-              </div>
+            <div className="flex gap-1">
+              <BoxText label="B" />
+              <DropButton width="small" title="TEXTO" />
+              <InputArea value="Lorem Ipsum" />
             </div>
             <div className="w-9 h-[35px] bg-[#4318FF] rounded-md text-white flex justify-center items-center" />
           </div>
           <div className="mt-1 flex justify-between">
-            <div className="flex">
-              <div className="w-9 h-[35px] bg-indigo-900 rounded-md text-white flex justify-center items-center">
-                C
-              </div>
-              <div className="ml-1">
-                <DropButton width="110px" title="LINK" />
-              </div>
-              <div className="ml-1">
-                <InputArea width="220px" value="https://milliondollar.com" />
-              </div>
+            <div className="flex gap-1">
+              <BoxText label="C" />
+              <DropButton width="small" title="LINK" />
+              <InputArea value="https://milliondollar.com" />
             </div>
             <div className="w-9 h-[35px] bg-[#4318FF] rounded-md text-white flex justify-center items-center" />
           </div>

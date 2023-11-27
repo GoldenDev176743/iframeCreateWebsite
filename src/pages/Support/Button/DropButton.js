@@ -2,10 +2,12 @@ import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDown
 
 const BlockButton = (props) => {
   return (
-    <div className={`w-[${props.width}] h-[35px] rounded-md bg-gray-200 flex items-center justify-between pl-3 pr-1 font-semibold`}>
+    <>
+    <div className={`h-[35px] rounded-md bg-gray-200 flex items-center justify-between pl-3 pr-1 font-semibold ${props.width === "small" ? "w-[108px]" : "w-[200px]"}`}>
       {props.title}
       <KeyboardArrowDownOutlinedIcon />
     </div>
+    </>
   );
 }
 

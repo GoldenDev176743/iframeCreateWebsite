@@ -2,7 +2,7 @@ import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 
 const SmallMovieCard = (props) => {
   return (
-    <div className="rounded-[20px] cursor-pointer bg-white hover:bg-[#2B3674] text-indigo-900 hover:text-[#eee] p-[10px] relative">
+    <div className="rounded-2xl cursor-pointer bg-white hover:bg-[#2B3674] text-indigo-900 hover:text-[#eee] p-[10px] relative">
       <div className="gradient-overlay rounded-[20px]">
         <img src="./card.png" alt="card.png" className="h-[120px] w-full" />
       </div>
