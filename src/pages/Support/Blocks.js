@@ -12,7 +12,7 @@ const Blocks = () => {
   return (
     <div>
       <div className="text-indigo-900 text-2xl font-bold">Blocks</div>
-      <div className="flex mt-2 gap-8">
+      <div className="flex mt-1 gap-8">
         {
           BlockList.map((item) => (
             <SmallMovieCard name={item.name} />
