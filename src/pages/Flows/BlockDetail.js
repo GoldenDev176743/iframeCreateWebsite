@@ -2,7 +2,7 @@ import DropButton from "./Button/DropButton";
 import InputArea from "./Button/InputArea";
 import DefaultButton from "../../components/DefaultButton";
 import BoxText from "../../components/BoxText";
-import ModalPage from "./ModalPage";
+import AddVideoModal from "./AddVideoModal";
 
 const BlockDetail = () => {
   return (
@@ -13,7 +13,7 @@ const BlockDetail = () => {
           <div className="text-slate-400 text-sm font-normal">
             Adicione interatividade ao seu path
           </div>
-          <ModalPage />
+          <AddVideoModal />
           <div className="mt-2 flex justify-between">
             <div className="flex gap-1">
               <BoxText label="A" />

@@ -10,6 +10,9 @@ const theme = createTheme({
     },
     special: {
       main: "#34A853",
+    },
+    transparent: {
+      main: "rgba(236, 5, 252, 0.4)"
     }
   },
 });
