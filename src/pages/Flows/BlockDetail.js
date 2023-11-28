@@ -1,8 +1,8 @@
-import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import DropButton from "./Button/DropButton";
 import InputArea from "./Button/InputArea";
 import DefaultButton from "../../components/DefaultButton";
 import BoxText from "../../components/BoxText";
+import ModalPage from "./ModalPage";
 
 const BlockDetail = () => {
   return (
@@ -13,12 +13,7 @@ const BlockDetail = () => {
           <div className="text-slate-400 text-sm font-normal">
             Adicione interatividade ao seu path
           </div>
-          <div className="mt-2 flex items-center">
-            <div className="w-9 h-[35px] bg-indigo-900 rounded-md text-white flex justify-center items-center">
-              <AddCircleOutlineIcon />
-            </div>
-            <div className="text-black text-sm font-bold ml-3">Add video</div>
-          </div>
+          <ModalPage />
           <div className="mt-2 flex justify-between">
             <div className="flex gap-1">
               <BoxText label="A" />
