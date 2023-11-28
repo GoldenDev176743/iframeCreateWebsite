@@ -1,14 +1,11 @@
-import CreateVideoCards from "./CreateVideoCards";
+import Blocks from "./Blocks";
+import BlockDetail from "./BlockDetail";
 
 const Content = () => {
   return (
-    <div className="mt-6 px-10">
-      <div className="text-black text-[22px] font-normal font-['DM Sans'] leading-normal">
-        Selecione uma das opções para criar seu vídeo:
-      </div>
-      <div className="mt-4">
-        <CreateVideoCards />
-      </div>
+    <div className="mt-10 px-10 w-[1421px]">
+      <Blocks />
+      <BlockDetail />
     </div>
   );
 };

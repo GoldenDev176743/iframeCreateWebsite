@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonIcon from "@mui/icons-material/Person";
@@ -47,7 +47,7 @@ const Menu = () => {
             {item.title === "Dashboard" ? (
               <HomeIcon />
             ) : item.title === "Flows" ? (
-              <ShoppingCartOutlinedIcon />
+              <ShoppingCartRoundedIcon />
             ) : item.title === "Analytics" ? (
               <BarChartOutlinedIcon />
             ) : item.title === "Suporte" ? (

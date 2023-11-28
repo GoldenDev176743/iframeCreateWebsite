@@ -22,7 +22,7 @@ const Blocks = () => {
           <AddCircleOutlineIcon
             sx={{ transform: "scale(3)" }}
           />
-          <div className="mb-[10%] mt-[16%]">Create Flow</div>
+          <div className="mb-[10%] mt-[16%]">Add New Block</div>
         </div>
       </div>
     </div>

@@ -1,16 +1,14 @@
 // import components
 import Header from "../../components/Header";
 import Content from "./Content";
-import Modal from "./Modal";
 
-const Flows = () => {
+const Support = () => {
   return(
     <div>
-      <Header name="Flows" search="block" />
+      <Header name="Flows" search="block" subtitle="#Created Flow 1" />
       <Content />
-      <Modal />
     </div>
   )
 }
 
-export default Flows;
+export default Support;
