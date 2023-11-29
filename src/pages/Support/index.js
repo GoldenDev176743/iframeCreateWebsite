@@ -5,7 +5,7 @@ import Content from "./Content";
 const Flows = () => {
   return(
     <div>
-      <Header name="Flows" search="block" />
+      <Header name="Flows" />
       <Content />
     </div>
   )

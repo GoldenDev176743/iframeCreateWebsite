@@ -5,7 +5,7 @@ import Content from "./Content";
 const Account = () => {
   return(
     <div>
-      <Header name="Bem vindo Marcelo!" search="block" />
+      <Header name="Bem vindo Marcelo!" />
       <Content />
     </div>
   )

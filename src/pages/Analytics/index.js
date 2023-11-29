@@ -5,7 +5,7 @@ import Content from "./Content";
 const Analytics = () => {
   return(
     <div>
-      <Header name="Analytics" search="block" />
+      <Header name="Analytics" />
       <Content />
     </div>
   )

@@ -6,7 +6,7 @@ import Content from "./Content";
 const Dashboard = () => {
   return (
     <div>
-      <Header name="Dashboard" search="hidden" />
+      <Header name="Dashboard" />
       <TopBar />
       <Content />
     </div>

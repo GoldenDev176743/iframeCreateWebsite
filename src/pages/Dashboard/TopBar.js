@@ -4,9 +4,9 @@ import SearchBar from "../../components/SearchBar";
 const TopBar = () => {
   return (
     <div className="flex h-[40px] justify-between mt-6 px-12">
-      <div>
-        <Button btnName="+ Create Flow" />
-      </div>
+      <a href="/flows">
+          <Button btnName="+ Create Flow" />
+      </a>
       <div className="flex gap-6 items-center">
         <Button btnName="Filter by" />
         <Button btnName="Order by" />
