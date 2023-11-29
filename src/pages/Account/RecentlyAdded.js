@@ -1,5 +1,20 @@
 import MovieCard from "../../components/MovieCard";
 
+const CardData = [
+  {
+    image: "card.png",
+    title: "#Flow1",
+  },
+  {
+    image: "card.png",
+    title: "#Flow2",
+  },
+  {
+    image: "card.png",
+    title: "#Flow3",
+  },
+];
+
 const RecentlyAdded = () => {
   return (
     <div className="mt-12">
@@ -7,9 +22,9 @@ const RecentlyAdded = () => {
         Recentemente adicionados
       </div>
       <div className="flex gap-10 mt-8">
-        <MovieCard name="#Flow1" />
-        <MovieCard name="#Flow2" />
-        <MovieCard name="#Flow3" />
+        {CardData.map((item) => (
+          <MovieCard style={item} />
+        ))}
       </div>
     </div>
   );

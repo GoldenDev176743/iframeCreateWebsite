@@ -9,7 +9,7 @@
 .gradient-overlay::before {
   content: "";
   position: absolute;
-  border-radius: 20px;
+  border-radius: 16px;
   top: 0;
   left: 0;
   width: 100%;

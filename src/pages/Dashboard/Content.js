@@ -1,18 +1,19 @@
 import CreateCard from "../../components/CreateCard";
-import MovieCards from "../../components/MovieCardSet";
 import MovieCard from "../../components/MovieCard";
+import MovieCardData from "../../data/MovieCardData";
 
-const Content = () => {
+const Content = (props) => {
+
+  const keyWord = props.keyWord;
+
   return (
-    <div className="flex justify-between mt-6 px-12">
-      <div className="w-[24%] h-[calc(100vh-184px)] bg-white rounded-[20px]">
-        <CreateCard />
-        <MovieCard />
-        <MovieCard />
-      </div>
-      <MovieCards />
-      <MovieCards />
-      <MovieCards />
+    <div className="flex flex-row gap-[1.333%] mt-6 px-12 flex-wrap w-full">
+      <CreateCard />
+      {
+        MovieCardData.filter((item) => item.title.toLowerCase().includes(keyWord.toLowerCase())).map((item) => (
+          <MovieCard style={item} />
+        ))
+      }
     </div>
   );
 };
