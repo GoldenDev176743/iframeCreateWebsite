@@ -1,5 +1,5 @@
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-import Progress from "../Progress";
+import Progress from "../../Account/Progress";
 
 const BasicPlan = () => {
   return (

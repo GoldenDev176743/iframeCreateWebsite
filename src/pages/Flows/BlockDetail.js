@@ -1,5 +1,5 @@
-import DropButton from "./Button/DropButton";
-import InputArea from "./Button/InputArea";
+import DropButton from "../Section/Flows/DropButton";
+import InputArea from "../Section/Flows/InputArea";
 import DefaultButton from "../../components/DefaultButton";
 import BoxText from "../../components/BoxText";
 import AddVideoModal from "./AddVideoModal";

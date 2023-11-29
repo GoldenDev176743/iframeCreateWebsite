@@ -27,9 +27,10 @@ const ItemSelectStyle3 = "w-1 h-9 bg-[#4318FF] rounded-[25px] block";
 const ItemNormalStyle3 = "";
 
 const Menu = () => {
-  
   const location = useLocation().pathname;
-  const [state, setState] = useState(location);
+  const [state, setState] = useState(
+    location === "/" ? "/dashboard" : location
+  );
   const navigate = useNavigate();
 
   return (
@@ -39,7 +40,9 @@ const Menu = () => {
           className={CommonStyle}
           onClick={() => {
             navigate(`${item.path}`);
-            item.title === "Log out" ? setState("/dashboard") : setState(item.path);
+            item.title === "Log out"
+              ? setState("/dashboard")
+              : setState(item.path);
           }}
         >
           <div

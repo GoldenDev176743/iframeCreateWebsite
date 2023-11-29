@@ -1,6 +1,6 @@
-import CreateFlow from "./components/CreateFlow";
-import TotalViews from "./components/TotalViews";
-import BasicPlan from "./components/BasicPlan";
+import CreateFlow from "../Section/Account/CreateFlow";
+import TotalViews from "../Section/Account/TotalViews";
+import BasicPlan from "../Section/Account/BasicPlan";
 
 const AccountInfo = () => {
   return (
