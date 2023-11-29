@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
-import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
+import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonIcon from "@mui/icons-material/Person";
@@ -14,6 +14,7 @@ const menuItem = [
   { title: "Analytics", path: "/analytics" },
   { title: "Suporte", path: "/support" },
   { title: "Conta", path: "/account" },
+  { title: "Log out", path: "/" },
 ];
 
 const CommonStyle =
@@ -26,7 +27,9 @@ const ItemSelectStyle3 = "w-1 h-9 bg-[#4318FF] rounded-[25px] block";
 const ItemNormalStyle3 = "";
 
 const Menu = () => {
-  const [state, setState] = useState("Dashboard");
+  
+  const location = useLocation().pathname;
+  const [state, setState] = useState(location);
   const navigate = useNavigate();
 
   return (
@@ -36,12 +39,12 @@ const Menu = () => {
           className={CommonStyle}
           onClick={() => {
             navigate(`${item.path}`);
-            setState(item.title);
+            item.title === "Log out" ? setState("/dashboard") : setState(item.path);
           }}
         >
           <div
             className={
-              state === item.title ? ItemSelectStyle1 : ItemNormalStyle1
+              state === item.path ? ItemSelectStyle1 : ItemNormalStyle1
             }
           >
             {item.title === "Dashboard" ? (
@@ -52,12 +55,14 @@ const Menu = () => {
               <BarChartOutlinedIcon />
             ) : item.title === "Suporte" ? (
               <DashboardIcon />
-            ) : (
+            ) : item.title === "Conta" ? (
               <PersonIcon />
+            ) : (
+              <LockIcon />
             )}
             <div
               className={
-                state === item.title ? ItemSelectStyle2 : ItemNormalStyle2
+                state === item.path ? ItemSelectStyle2 : ItemNormalStyle2
               }
             >
               {item.title}
@@ -65,23 +70,11 @@ const Menu = () => {
           </div>
           <div
             className={
-              state === item.title ? ItemSelectStyle3 : ItemNormalStyle3
+              state === item.path ? ItemSelectStyle3 : ItemNormalStyle3
             }
           />
         </div>
       ))}
-      <div
-        className={CommonStyle}
-        onClick={() => {
-          navigate("/dashboard");
-          setState("Dashboard");
-        }}
-      >
-        <div className={ItemNormalStyle1}>
-          <LockIcon />
-          <div className={ItemNormalStyle2}>Log out</div>
-        </div>
-      </div>
     </div>
   );
 };
