@@ -6,13 +6,13 @@ import { useState } from "react";
 
 const Dashboard = () => {
 
-  const [keyWord, setKeyWord] = useState("");
+  const [searchKey, setSearchKey] = useState("");
 
   return (
     <div>
       <Header name="Dashboard" />
-      <TopBar setKeyWord={setKeyWord} />
-      <Content keyWord={keyWord} />
+      <TopBar setSearchKey={setSearchKey} />
+      <Content searchKey={searchKey} />
     </div>
   );
 };

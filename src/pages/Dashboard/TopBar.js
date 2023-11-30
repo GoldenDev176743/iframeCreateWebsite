@@ -1,9 +1,11 @@
 import Button from "../../components/DefaultButton";
-import SearchBar from "../../components/SearchBar";
+import SearchBar from "../Section/Dashboard/SearchBar";
+import FilterButton from "../Section/Dashboard/FilterButton";
+import OrderButton from "../Section/Dashboard/OrderButton";
 
 const TopBar = (props) => {
   
-  const setKeyWord = props.setKeyWord;
+  const setSearchKey = props.setSearchKey;
 
   return (
     <div className="flex h-[40px] justify-between mt-6 px-12">
@@ -11,9 +13,9 @@ const TopBar = (props) => {
           <Button btnName="+ Create Flow" />
       </a>
       <div className="flex gap-6 items-center">
-        <Button btnName="Filter by" />
-        <Button btnName="Order by" />
-        <SearchBar bg="bg-white" setKeyWord={setKeyWord} />
+        <FilterButton />
+        <OrderButton />
+        <SearchBar setSearchKey={setSearchKey} />
       </div>
     </div>
   );

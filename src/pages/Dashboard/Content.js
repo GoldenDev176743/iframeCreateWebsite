@@ -4,13 +4,13 @@ import MovieCardData from "../../data/MovieCardData";
 
 const Content = (props) => {
 
-  const keyWord = props.keyWord;
+  const searchKey = props.searchKey;
 
   return (
     <div className="flex flex-row gap-[1.333%] mt-6 px-12 flex-wrap w-full">
       <CreateCard />
       {
-        MovieCardData.filter((item) => item.title.toLowerCase().includes(keyWord.toLowerCase())).map((item) => (
+        MovieCardData.filter((item) => item.title.toLowerCase().includes(searchKey.toLowerCase())).map((item) => (
           <MovieCard style={item} />
         ))
       }
