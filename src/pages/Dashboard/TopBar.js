@@ -6,6 +6,8 @@ import OrderButton from "../Section/Dashboard/OrderButton";
 const TopBar = (props) => {
   
   const setSearchKey = props.setSearchKey;
+  const setFilterKey = props.setFilterKey;
+  const setOrderKey = props.setOrderKey;
 
   return (
     <div className="flex h-[40px] justify-between mt-6 px-12">
@@ -13,8 +15,8 @@ const TopBar = (props) => {
           <Button btnName="+ Create Flow" />
       </a>
       <div className="flex gap-6 items-center">
-        <FilterButton />
-        <OrderButton />
+        <FilterButton setFilterKey={setFilterKey} />
+        <OrderButton setOrderKey={setOrderKey} />
         <SearchBar setSearchKey={setSearchKey} />
       </div>
     </div>

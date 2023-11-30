@@ -7,12 +7,14 @@ import { useState } from "react";
 const Dashboard = () => {
 
   const [searchKey, setSearchKey] = useState("");
+  const [filterKey, setFilterKey] = useState("");
+  const [orderKey, setOrderKey] = useState("id");
 
   return (
     <div>
       <Header name="Dashboard" />
-      <TopBar setSearchKey={setSearchKey} />
-      <Content searchKey={searchKey} />
+      <TopBar setSearchKey={setSearchKey} setFilterKey={setFilterKey} setOrderKey={setOrderKey} />
+      <Content searchKey={searchKey} filterKey={filterKey} orderKey={orderKey} />
     </div>
   );
 };

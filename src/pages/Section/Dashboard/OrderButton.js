@@ -6,11 +6,13 @@ import { ThemeProvider } from "@mui/system";
 import theme from "../../../theme";
 import { ArrowDropDown } from "@material-ui/icons";
 
-const OrderButton = () => {
-  const [tag, setTag] = useState("");
+const OrderButton = (props) => {
+  const [tag, setTag] = useState("id");
+  const setOrderKey = props.setOrderKey;
 
-  const handleChange = (event) => {
-    setTag(event.target.value);
+  const handleChange = (e) => {
+    setTag(e.target.value);
+    setOrderKey(e.target.value);
   };
 
   return (
@@ -20,11 +22,10 @@ const OrderButton = () => {
           value={tag}
           onChange={handleChange}
           sx={{ height: 36, bgcolor: "#11047A", color: "white", borderRadius: "20px", fontSize: "14px" }}
-          displayEmpty
           IconComponent={ArrowDropDown}
         >
-          <MenuItem value="">Order by</MenuItem>
-          <MenuItem value="name">Name</MenuItem>
+          <MenuItem value="id">Order by</MenuItem>
+          <MenuItem value="title">Title</MenuItem>
           <MenuItem value="creation">Creation</MenuItem>
         </Select>
       </FormControl>

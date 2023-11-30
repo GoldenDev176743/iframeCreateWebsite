@@ -1,91 +1,91 @@
 const MovieCardData = [
   {
     id: "001",
-    create_Time: "2023-11-28",
-    update_Time: "2023-11-29",
+    creation: "2023-11-26",
+    updation: "2023-11-29",
     image: "card.png",
     tag: "Action",
     title: "Starbucks"
   },
   {
     id: "002",
-    create_Time: "2023-11-28",
-    update_Time: "2023-11-29",
+    creation: "2023-11-18",
+    updation: "2023-11-29",
     image: "avatar.jpg",
     tag: "Hollywood",
-    title: "Secret Super Star"
+    title: "Secret SuperStar"
   },
   {
     id: "003",
-    create_Time: "2023-11-28",
-    update_Time: "2023-11-29",
+    creation: "2023-11-28",
+    updation: "2023-11-29",
     image: "video_image.jpg",
-    tag: "YouTube",
-    title: "Coding Man"
+    tag: "Hollywood",
+    title: "David Cofferfield"
   },
   {
     id: "004",
-    create_Time: "2023-11-28",
-    update_Time: "2023-11-29",
-    image: "card.png",
+    creation: "2023-11-23",
+    updation: "2023-11-29",
+    image: "avatar.jpg",
     tag: "Hollywood",
-    title: "Starbucks"
+    title: "The Wind Is Blown"
   },
   {
     id: "005",
-    create_Time: "2023-11-28",
-    update_Time: "2023-11-29",
-    image: "card.png",
+    creation: "2023-11-09",
+    updation: "2023-11-29",
+    image: "video_image.jpg",
     tag: "Action",
-    title: "Coding Man"
+    title: "Kungfu Panda"
   },
   {
     id: "006",
-    create_Time: "2023-11-28",
-    update_Time: "2023-11-29",
+    creation: "2023-10-30",
+    updation: "2023-11-29",
     image: "card.png",
     tag: "Hollywood",
-    title: "Secret Super Star"
+    title: "Wicked I"
   },
   {
     id: "007",
-    create_Time: "2023-11-28",
-    update_Time: "2023-11-29",
-    image: "video_image.jpg",
+    creation: "2023-11-04",
+    updation: "2023-11-29",
+    image: "card.png",
     tag: "Action",
-    title: "Starbucks"
+    title: "Hamlet"
   },
   {
     id: "008",
-    create_Time: "2023-11-28",
-    update_Time: "2023-11-29",
-    image: "card.png",
+    creation: "2021-08-01",
+    updation: "2023-11-29",
+    image: "video_image.jpg",
     tag: "Action",
-    title: "Coding Man"
+    title: "Romio And Juliate"
   },
   {
     id: "009",
-    create_Time: "2023-11-28",
-    update_Time: "2023-11-29",
-    image: "card.png",
+    creation: "2022-12-31",
+    updation: "2023-11-29",
+    image: "video_image.jpg",
     tag: "Action",
-    title: "Secret Super Star"
+    title: "Three Musketeers"
   },
   {
     id: "010",
-    create_Time: "2023-11-28",
-    update_Time: "2023-11-29",
-    image: "avatar.jpg",
+    creation: "2022-11-23",
+    updation: "2023-11-29",
+    image: "card.png",
     tag: "Hollywood",
-    title: "Starbucks"
+    title: "Les Miserable"
   },
   {
     id: "011",
-    create_Time: "2023-11-28",
-    update_Time: "2023-11-29",
-    image: "card.png",
-    tag: "YouTube",
-    title: "Coding Man"
+    creation: "2022-02-08",
+    updation: "2023-11-29",
+    image: "avatar.jpg",
+    tag: "Hollywood",
+    title: "Counter Of Monte Cristo"
   }
 ]
 

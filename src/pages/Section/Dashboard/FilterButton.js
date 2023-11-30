@@ -6,11 +6,13 @@ import { ThemeProvider } from "@mui/system";
 import theme from "../../../theme";
 import { ArrowDropDown } from "@material-ui/icons";
 
-const FilterButton = () => {
+const FilterButton = (props) => {
   const [tag, setTag] = useState("");
+  const setFilterKey = props.setFilterKey;
 
-  const handleChange = (event) => {
-    setTag(event.target.value);
+  const handleChange = (e) => {
+    setTag(e.target.value);
+    setFilterKey(e.target.value);
   };
 
   return (
