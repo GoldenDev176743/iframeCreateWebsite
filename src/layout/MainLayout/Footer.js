@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <div
-      className={`w-full bg-inherit absolute bottom-4 left-0 px-14 flex justify-between mt-1 ${
+      className={`w-[85%] bg-[#F4F7FE] fixed bottom-0 right-0 px-14 py-3 flex justify-between mt-1 ${
         Location.pathname === "/dashboard" ? "hidden" : ""
       }`}
     >

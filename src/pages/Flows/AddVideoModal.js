@@ -24,8 +24,11 @@ export default function AddVideoModal() {
 
   return (
     <div>
-      <div className="mt-2 flex items-center cursor-pointer" onClick={handleOpen}>
-        <div className="w-9 h-[35px] bg-indigo-900 rounded-md text-white flex justify-center items-center">
+      <div className="mt-2 flex items-center">
+        <div
+          className="w-9 h-[35px] bg-indigo-900 rounded-md text-white flex justify-center items-center hover:bg-[#11047A] hover:animate-[scale_0.2s_linear] hover:scale-105 cursor-pointer"
+          onClick={handleOpen}
+        >
           <AddCircleOutlineIcon />
         </div>
         <div className="text-black text-sm font-bold ml-3">Add video</div>

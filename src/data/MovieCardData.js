@@ -5,7 +5,7 @@ const MovieCardData = [
     updation: "2023-11-29",
     image: "card.png",
     tag: "Action",
-    title: "Starbucks"
+    title: "Starbucks",
   },
   {
     id: "002",
@@ -13,7 +13,7 @@ const MovieCardData = [
     updation: "2023-11-29",
     image: "avatar.jpg",
     tag: "Hollywood",
-    title: "Secret SuperStar"
+    title: "Secret SuperStar",
   },
   {
     id: "003",
@@ -21,7 +21,7 @@ const MovieCardData = [
     updation: "2023-11-29",
     image: "video_image.jpg",
     tag: "Hollywood",
-    title: "David Cofferfield"
+    title: "David Cofferfield",
   },
   {
     id: "004",
@@ -29,7 +29,7 @@ const MovieCardData = [
     updation: "2023-11-29",
     image: "avatar.jpg",
     tag: "Hollywood",
-    title: "The Wind Is Blown"
+    title: "The Wind Is Blown",
   },
   {
     id: "005",
@@ -37,7 +37,7 @@ const MovieCardData = [
     updation: "2023-11-29",
     image: "video_image.jpg",
     tag: "Action",
-    title: "Kungfu Panda"
+    title: "Kungfu Panda",
   },
   {
     id: "006",
@@ -45,7 +45,7 @@ const MovieCardData = [
     updation: "2023-11-29",
     image: "card.png",
     tag: "Hollywood",
-    title: "Wicked I"
+    title: "Wicked I",
   },
   {
     id: "007",
@@ -53,7 +53,7 @@ const MovieCardData = [
     updation: "2023-11-29",
     image: "card.png",
     tag: "Action",
-    title: "Hamlet"
+    title: "Hamlet",
   },
   {
     id: "008",
@@ -61,7 +61,7 @@ const MovieCardData = [
     updation: "2023-11-29",
     image: "video_image.jpg",
     tag: "Action",
-    title: "Romio And Juliate"
+    title: "Romio And Juliate",
   },
   {
     id: "009",
@@ -69,7 +69,7 @@ const MovieCardData = [
     updation: "2023-11-29",
     image: "video_image.jpg",
     tag: "Action",
-    title: "Three Musketeers"
+    title: "Three Musketeers",
   },
   {
     id: "010",
@@ -77,7 +77,7 @@ const MovieCardData = [
     updation: "2023-11-29",
     image: "card.png",
     tag: "Hollywood",
-    title: "Les Miserable"
+    title: "Les Miserable",
   },
   {
     id: "011",
@@ -85,8 +85,8 @@ const MovieCardData = [
     updation: "2023-11-29",
     image: "avatar.jpg",
     tag: "Hollywood",
-    title: "Counter Of Monte Cristo"
-  }
-]
+    title: "Counter Of Monte Cristo",
+  },
+];
 
 export default MovieCardData;
