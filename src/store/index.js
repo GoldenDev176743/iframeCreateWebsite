@@ -1,8 +1,8 @@
-//third-party
+// third-party
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch as useAppDispatch, useSelector as useAppSelector } from 'react-redux';
 
-//project import
+// project import
 import reducers from './reducers';
 
 // ==============================|| REDUX TOOLKIT - MAIN STORE ||============================== //

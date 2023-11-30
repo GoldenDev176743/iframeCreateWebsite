@@ -51,7 +51,7 @@ const MovieCardData = [
     id: "007",
     create_Time: "2023-11-28",
     update_Time: "2023-11-29",
-    image: "card.png",
+    image: "video_image.jpg",
     tag: "Action",
     title: "Starbucks"
   },
@@ -75,7 +75,7 @@ const MovieCardData = [
     id: "010",
     create_Time: "2023-11-28",
     update_Time: "2023-11-29",
-    image: "card.png",
+    image: "avatar.jpg",
     tag: "Hollywood",
     title: "Starbucks"
   },

@@ -1,10 +1,10 @@
 // third-party
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 // project import
-import axios from '../../utils/axios';
+import axios from "../../utils/axios";
 
-//initial state
+// initial state
 const initialState = {
   openItem: ['dashboard'],
   openComponent: 'buttons',

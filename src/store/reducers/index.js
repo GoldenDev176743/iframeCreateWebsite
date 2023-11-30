@@ -1,5 +1,5 @@
 // third-party
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 
 // project import
 import menu from './menu';
