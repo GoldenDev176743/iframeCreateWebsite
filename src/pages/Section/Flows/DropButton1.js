@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
@@ -6,6 +6,10 @@ import { KeyboardArrowDown } from "@material-ui/icons";
 
 const DropButton1 = (props) => {
   const [type, setType] = useState(props.default);
+
+  useEffect(() => {
+    setType(props.default);
+  }, [props.default]);
 
   const handleChange = (e) => {
     setType(e.target.value);

@@ -3,14 +3,14 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import BlocksData from "../../data/BlocksData";
 
 const Blocks = (props) => {
-  const setBlock = props.setBlock;
+  const setBlock_id = props.setBlock_id;
 
   return (
     <div className="w-full">
       <div className="text-indigo-900 text-2xl font-bold">Blocks</div>
       <div className="flex flex-row mt-1 gap-8 flex-wrap">
         {BlocksData.map((item) => (
-          <div onClick={() => setBlock(item.id)}>
+          <div onClick={() => setBlock_id(item.id)}>
             <SmallMovieCard title={item.title} />
           </div>
         ))}
