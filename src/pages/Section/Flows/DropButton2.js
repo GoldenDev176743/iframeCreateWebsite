@@ -12,7 +12,7 @@ const DropButton2 = (props) => {
   };
 
   return (
-    <FormControl sx={{ width: 200 }}>
+    <FormControl sx={{ width: 212 }}>
       <Select
         value={type}
         onChange={handleChange}

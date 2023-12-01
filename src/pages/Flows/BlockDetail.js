@@ -5,13 +5,16 @@ import AddVideoModal from "./AddVideoModal";
 import BlocksData from "../../data/BlocksData";
 import DropButton1 from "../Section/Flows/DropButton1";
 import DropButton2 from "../Section/Flows/DropButton2";
+import ColorPicker from "../Section/Flows/ColorPicker";
+import { useState } from "react";
 
 const BlockDetail = (props) => {
   const Block = props.Block;
+  const [times, setTimes] = useState(3);
 
   return (
-    <div>
-      {BlocksData.filter((item) => item.id.includes(Block)).map((item) => (
+    <div className="pb-12">
+      {BlocksData.filter((item) => item.id === Block).map((item) => (
         <div className="w-full mt-4 flex justify-between">
           <div>
             <div className="w-[42vw] bg-white rounded-2xl px-8 py-4">
@@ -22,32 +25,28 @@ const BlockDetail = (props) => {
                 Adicione interatividade ao seu path
               </div>
               <AddVideoModal />
-              <div className="mt-2 flex justify-between">
-                <div className="flex gap-1">
-                  <BoxText label="A" />
-                  <DropButton1 default="block" />
-                  <DropButton2 default="block2" />
-                </div>
-                <div className="w-9 h-[35px] bg-[#4318FF] rounded-md text-white flex justify-center items-center" />
-              </div>
-              <div className="mt-1 flex justify-between">
-                <div className="flex gap-1">
-                  <BoxText label="B" />
-                  <DropButton1 default="text" />
-                  <InputArea defaultValue="Lorem Ipsum" />
-                </div>
-                <div className="w-9 h-[35px] bg-[#4318FF] rounded-md text-white flex justify-center items-center" />
-              </div>
-              <div className="mt-1 flex justify-between">
-                <div className="flex gap-1">
-                  <BoxText label="C" />
-                  <DropButton1 default="link" />
-                  <InputArea defaultValue="https://milliondollar.com" />
-                </div>
-                <div className="w-9 h-[35px] bg-[#4318FF] rounded-md text-white flex justify-center items-center" />
-              </div>
+              {item.interactivity.map((item, index) =>
+                index < times ? (
+                  <div className="mt-2 flex justify-between">
+                    <div className="flex gap-1">
+                      <BoxText label={item.label} />
+                      <DropButton1 default={item.defaultType} />
+                      {item.defaultType === "block" ? (
+                        <DropButton2 default={item.defaultValue} />
+                      ) : (
+                        <InputArea default={item.defaultValue} />
+                      )}
+                    </div>
+                    <ColorPicker />
+                  </div>
+                ) : (
+                  <div />
+                )
+              )}
               <div className="flex gap-6 mt-4 justify-center text-white">
-                <DefaultButton btnName="Adicionar +" />
+                <div onClick={() => setTimes(times + 1)}>
+                  <DefaultButton btnName="Adicionar +" />
+                </div>
                 <DefaultButton btnName="Salvar" color="special" />
               </div>
             </div>
