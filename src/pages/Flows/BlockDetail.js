@@ -1,25 +1,42 @@
-import InputArea from "../Section/Flows/InputArea";
+import { useEffect, useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import copy from "copy-to-clipboard";
 import DefaultButton from "../../components/DefaultButton";
-import BoxText from "../../components/BoxText";
 import AddVideoModal from "./AddVideoModal";
 import BlocksData from "../../data/BlocksData";
-import DropButton1 from "../Section/Flows/DropButton1";
-import DropButton2 from "../Section/Flows/DropButton2";
-import ColorPicker from "../Section/Flows/ColorPicker";
-import { useEffect, useState } from "react";
+import ButtonSet from "../Section/Flows/ButtonSet";
+import Preview from "./Preview";
 
 const BlockDetail = (props) => {
   const Block_id = props.Block_id;
   const [Block, setBlock] = useState(BlocksData[Block_id - 1]);
+  const [times, setTimes] = useState(Block.itemNum);
 
   useEffect(() => {
     setBlock(BlocksData[Block_id - 1]);
+    setTimes(Block.itemNum);
   }, [Block_id]);
 
-  const [times, setTimes] = useState(Block.itemNum);
+  const copyToClipboard = () => {
+    copy(Block.sourceCode);
+    toast.success("Code Copied!");
+  };
 
   return (
-    <div className="pb-12">
+    <div className="pb-10">
+      <ToastContainer
+        position="bottom-right"
+        autoClose={2000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <div className="w-full mt-4 flex justify-between">
         <div>
           <div className="w-[42vw] bg-white rounded-2xl px-8 py-4">
@@ -28,24 +45,11 @@ const BlockDetail = (props) => {
               Adicione interatividade ao seu path
             </div>
             <AddVideoModal />
-            {Block.interactivity.map((item, index) =>
-              index < Block.itemNum ? (
-                <div className="mt-2 flex justify-between">
-                  <div className="flex gap-1">
-                    <BoxText label={item.label} />
-                    <DropButton1 default={item.defaultType} />
-                    {item.defaultType === "block" ? (
-                      <DropButton2 default={item.defaultValue} />
-                    ) : (
-                      <InputArea default={item.defaultValue} />
-                    )}
-                  </div>
-                  <ColorPicker />
-                </div>
-              ) : (
-                <div />
-              )
-            )}
+            <div className="mt-2">
+              {Block.interactivity.map((item, index) =>
+                index < times ? <ButtonSet item={item} Block_id={Block_id} /> : <div />
+              )}
+            </div>
             <div className="flex gap-6 mt-4 justify-center text-white">
               <div onClick={() => setTimes(times + 1)}>
                 <DefaultButton btnName="Adicionar +" />
@@ -60,21 +64,22 @@ const BlockDetail = (props) => {
             <div className="text-slate-400 text-sm font-normal">
               Copie o código e adicione no head da sua página.
             </div>
-            <div className="w-[100%] h-[10vh] bg-gray-200 rounded-md px-4 py-2">
+            <div className="w-[100%] h-[10vh] bg-gray-200 rounded-md px-4 py-2 overflow-auto">
               {Block.sourceCode}
             </div>
-            <div className="mt-2 flex justify-end">
+            <div className="mt-2 flex justify-end" onClick={copyToClipboard}>
               <DefaultButton btnName="Copiar código" />
             </div>
           </div>
         </div>
-        <div className="w-[24%] h-[52vh] bg-zinc-300 rounded-[20px]">
-          <div className="w-[88%] h-[28px] bg-[#4318FF] rounded-md border border-black mx-auto mt-32 pl-10 relative text-white">
-            Lorem Ipsum
-            <div className="absolute top-[-10px] left-[-1px] text-black bg-white w-[20px] h-[20px] rounded-[6px] border border-black flex items-center justify-center">
-              B
-            </div>
-          </div>
+        <div className="w-[24%] h-[52vh] bg-zinc-300 rounded-[20px] pt-20">
+          {Block.interactivity.map((item, index) =>
+            index < Block.itemNum ? (
+              <Preview item={item} />
+            ) : (
+              <div />
+            )
+          )}
         </div>
       </div>
     </div>

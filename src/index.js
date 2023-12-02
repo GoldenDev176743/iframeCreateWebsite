@@ -13,8 +13,8 @@ import "./assets/third-party/apex-chart.css";
 import "./assets/third-party/react-table.css";
 
 // project import
-import App from './App';
-import { store } from './store';
+import App from "./App";
+import { store } from "./store";
 
 // import { configProvider } from 'contexts/ConfigContext';
 import reportWebVitals from "./reportWebVitals";

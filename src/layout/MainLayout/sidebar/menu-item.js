@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
@@ -31,52 +31,52 @@ const Menu = () => {
   const [state, setState] = useState(
     location === "/" ? "/dashboard" : location
   );
-  const navigate = useNavigate();
 
   return (
     <div className="mt-5 font-semibold text-[#A3AED0]">
       {menuItem.map((item) => (
-        <div
-          className={CommonStyle}
-          onClick={() => {
-            navigate(`${item.path}`);
-            item.title === "Log out"
-              ? setState("/dashboard")
-              : setState(item.path);
-          }}
-        >
+        <a href={item.path}>
           <div
-            className={
-              state === item.path ? ItemSelectStyle1 : ItemNormalStyle1
-            }
+            className={CommonStyle}
+            onClick={() => {
+              item.title === "Log out"
+                ? setState("/dashboard")
+                : setState(item.path);
+            }}
           >
-            {item.title === "Dashboard" ? (
-              <HomeIcon />
-            ) : item.title === "Flows" ? (
-              <ShoppingCartRoundedIcon />
-            ) : item.title === "Analytics" ? (
-              <BarChartOutlinedIcon />
-            ) : item.title === "Suporte" ? (
-              <DashboardIcon />
-            ) : item.title === "Conta" ? (
-              <PersonIcon />
-            ) : (
-              <LockIcon />
-            )}
             <div
               className={
-                state === item.path ? ItemSelectStyle2 : ItemNormalStyle2
+                state === item.path ? ItemSelectStyle1 : ItemNormalStyle1
               }
             >
-              {item.title}
+              {item.title === "Dashboard" ? (
+                <HomeIcon />
+              ) : item.title === "Flows" ? (
+                <ShoppingCartRoundedIcon />
+              ) : item.title === "Analytics" ? (
+                <BarChartOutlinedIcon />
+              ) : item.title === "Suporte" ? (
+                <DashboardIcon />
+              ) : item.title === "Conta" ? (
+                <PersonIcon />
+              ) : (
+                <LockIcon />
+              )}
+              <div
+                className={
+                  state === item.path ? ItemSelectStyle2 : ItemNormalStyle2
+                }
+              >
+                {item.title}
+              </div>
             </div>
+            <div
+              className={
+                state === item.path ? ItemSelectStyle3 : ItemNormalStyle3
+              }
+            />
           </div>
-          <div
-            className={
-              state === item.path ? ItemSelectStyle3 : ItemNormalStyle3
-            }
-          />
-        </div>
+        </a>
       ))}
     </div>
   );

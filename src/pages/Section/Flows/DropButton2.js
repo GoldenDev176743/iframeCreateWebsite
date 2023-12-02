@@ -32,6 +32,7 @@ const DropButton2 = (props) => {
         <MenuItem value="block1">Block #1</MenuItem>
         <MenuItem value="block2">Block #2</MenuItem>
         <MenuItem value="block3">Block #3</MenuItem>
+        <MenuItem value="block4">Block #4</MenuItem>
       </Select>
     </FormControl>
   );

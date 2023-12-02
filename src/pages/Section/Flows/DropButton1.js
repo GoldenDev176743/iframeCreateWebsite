@@ -5,20 +5,23 @@ import Select from "@mui/material/Select";
 import { KeyboardArrowDown } from "@material-ui/icons";
 
 const DropButton1 = (props) => {
-  const [type, setType] = useState(props.default);
+
+  const setInputType = props.setInputType;
+  const [buttonType, setButtonType] = useState(props.default);
 
   useEffect(() => {
-    setType(props.default);
+    setButtonType(props.default)
   }, [props.default]);
 
   const handleChange = (e) => {
-    setType(e.target.value);
+    setButtonType(e.target.value);
+    setInputType(e.target.value);
   };
 
   return (
     <FormControl sx={{ width: 108 }}>
       <Select
-        value={type}
+        value={buttonType}
         onChange={handleChange}
         sx={{
           height: "35px",

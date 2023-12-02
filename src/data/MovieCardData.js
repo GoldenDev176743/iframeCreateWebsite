@@ -61,7 +61,7 @@ const MovieCardData = [
     updation: "2023-11-29",
     image: "video_image.jpg",
     tag: "Action",
-    title: "Romio And Juliate",
+    title: "Romeo and Juliet",
   },
   {
     id: "009",
