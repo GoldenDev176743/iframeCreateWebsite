@@ -8,7 +8,7 @@ const Blocks = (props) => {
   return (
     <div className="w-full">
       <div className="text-indigo-900 text-2xl font-bold">Blocks</div>
-      <div className="flex flex-row mt-1 gap-8 flex-wrap">
+      <div className="flex flex-row mt-1 gap-[2.4%] flex-wrap">
         {BlocksData.map((item) => (
           <div onClick={() => setBlock_id(item.id)}>
             <SmallMovieCard title={item.title} />
