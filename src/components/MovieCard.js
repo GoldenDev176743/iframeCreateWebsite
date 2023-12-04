@@ -8,7 +8,7 @@ const MovieCard = (props) => {
         <div className="gradient-overlay rounded-2xl">
           <img src={`./${props.style.image}`} alt={props.style.image} className="h-[16vh] w-full rounded-2xl" />
         </div>
-        <div className="text-2xl font-bold ml-2">
+        <div className="text-2xl font-bold px-2 w-full truncate">
           {props.style.title}
         </div>
         <div className="flex align-center text-slate-400 ml-2">

@@ -13,7 +13,7 @@ const MovieCardData = [
     updation: "2023-11-29",
     image: "avatar.jpg",
     tag: "Hollywood",
-    title: "Secret SuperStar",
+    title: "Othello",
   },
   {
     id: "003",
@@ -29,7 +29,7 @@ const MovieCardData = [
     updation: "2023-11-29",
     image: "avatar.jpg",
     tag: "Hollywood",
-    title: "The Wind Is Blown",
+    title: "Hamlet",
   },
   {
     id: "005",
@@ -37,7 +37,7 @@ const MovieCardData = [
     updation: "2023-11-29",
     image: "video_image.jpg",
     tag: "Action",
-    title: "Kungfu Panda",
+    title: "Macbeth",
   },
   {
     id: "006",
@@ -45,7 +45,7 @@ const MovieCardData = [
     updation: "2023-11-29",
     image: "card.png",
     tag: "Hollywood",
-    title: "Wicked I",
+    title: "A Midsummer Night's Dream",
   },
   {
     id: "007",
@@ -53,7 +53,7 @@ const MovieCardData = [
     updation: "2023-11-29",
     image: "card.png",
     tag: "Action",
-    title: "Hamlet",
+    title: "King Lear",
   },
   {
     id: "008",
