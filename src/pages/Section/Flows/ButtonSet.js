@@ -18,7 +18,7 @@ const ButtonSet = (props) => {
     <div className="mt-1 flex justify-between">
       <div className="flex gap-1">
         <BoxText label={item.label} />
-        <DropButton1 default={item.defaultType} setInputType={setInputType} />
+        <DropButton1 default={item.defaultType} setInputType={setInputType} Block_id={Block_id} />
         {inputType === "block" ? (
           <DropButton2 default={item.defaultValue} />
         ) : (

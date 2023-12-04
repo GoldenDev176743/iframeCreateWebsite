@@ -13,6 +13,7 @@
     "@mui/icons-material": "^5.14.18",
     "@mui/lab": "^5.0.0-alpha.153",
     "@mui/material": "^5.14.18",
+    "@mui/styles": "^5.14.19",
     "@mui/system": "^5.14.18",
     "@reduxjs/toolkit": "^1.9.7",
     "@syncfusion/ej2-react-inputs": "^23.2.4",

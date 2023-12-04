@@ -11,7 +11,7 @@ const DropButton1 = (props) => {
 
   useEffect(() => {
     setButtonType(props.default)
-  }, [props.default]);
+  }, [props.Block_id]);
 
   const handleChange = (e) => {
     setButtonType(e.target.value);
